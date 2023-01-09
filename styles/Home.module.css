@@ -39,11 +39,38 @@
   font-family: var(--font-mono);
 }
 
+.code span {
+  color: rgba(2, 65, 255, 0.797);
+}
+
 .grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(25%, auto));
   width: var(--max-width);
   max-width: 100%;
+}
+
+.grid button {
+  border: none;
+  border-radius: 6px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color .3s ease-in;
+}
+
+.grid button:hover {
+  background-color: white;
+  color: black;
+}
+
+.grid button:first-of-type {
+  margin-right: 7px;
+  background-color: rgba(2, 65, 255, 0.797);
+}
+
+.grid button:first-of-type:hover {
+  background-color: white;
+  /* color: white; */
 }
 
 .card {

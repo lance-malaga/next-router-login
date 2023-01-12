@@ -39,30 +39,33 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className={styles.main}>
-
-        <label>First Name:</label>
-        <input
-          type="text"
-          id="first"
-          name="first"
-          pattern="[A-Z]{1}[a-z]{2,10}"
-          title="The first letter should be capitalized"
-          onChange={(e => setFormData({...formData, firstName: e.target.value}))}
-          value={formData.firstName}
-        />
-
-        <label>Username:</label>
-        <input
-          type="text"
-          id="username"
-          name="username"
-          title="Type your username"
-          minLength={5}
-          maxLength={10}
-          required
-          onChange={(e => setFormData({...formData, username: e.target.value}))}
-        />
+      <main className={styles.mainContainer}>
+        <h1>Login</h1>
+        <div className={styles.inputContainer}>
+          <label>First Name:</label>
+          <input
+            type="text"
+            id="first"
+            name="first"
+            pattern="[A-Z]{1}[a-z]{2,10}"
+            title="The first letter should be capitalized"
+            onChange={(e => setFormData({...formData, firstName: e.target.value}))}
+            value={formData.firstName}
+          />
+        </div>
+        <div className={styles.inputContainer}>
+          <label>Username:</label>
+          <input
+            type="text"
+            id="username"
+            name="username"
+            title="Type your username"
+            minLength={5}
+            maxLength={10}
+            required
+            onChange={(e => setFormData({...formData, username: e.target.value}))}
+          />
+        </div>
         <button 
           type="submit" 
           onClick={() => CheckLogin()}

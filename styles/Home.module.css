@@ -7,6 +7,26 @@
   min-height: 100vh;
 }
 
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 6rem;
+  min-height: 70vh;
+}
+
+.inputContainer {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.main input {
+  padding: 10px;
+  margin-top: 10px;
+}
+
 .description {
   display: inherit;
   justify-content: inherit;
@@ -50,6 +70,7 @@
   max-width: 100%;
 }
 
+.main button,
 .grid button {
   border: none;
   border-radius: 6px;
@@ -58,6 +79,7 @@
   transition: background-color .3s ease-in;
 }
 
+.main button:hover,
 .grid button:hover {
   background-color: white;
   color: black;
